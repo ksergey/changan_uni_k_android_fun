@@ -144,6 +144,7 @@ remount succeeded
 
 ## Список литературы
 
-* [Товарищи китайцы](https://github.com/Zerocnx/ChangAn-Raeton-UNIV-)
+* [Zerocnx 1](https://github.com/Zerocnx/ChangAn-Raeton-UNIV-)
+* [Zerocnx 2](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong)
 * [XDA](https://forum.xda-developers.com/t/changan-uni-t-2022-s202_ica_spm8666p1_64_car.4540235/)
 * [Telegram канал русскоязычного сообщества Changan UNI K](https://t.me/changan_uni_k)
