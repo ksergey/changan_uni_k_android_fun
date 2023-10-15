@@ -9,15 +9,21 @@
 
 Запускаем приложение телефон
 
-![](/assets/0-phone-0.png)
+<p align="center">
+  <img src="/assets/0-phone-0.png" width="85%"/>
+</p>
 
 Вводим номер `*#*#888` и нажимаем вызов
 
-![](/assets/0-phone-2.png)
+<p align="center">
+  <img src="/assets/0-phone-2.png" width="85%"/>
+</p>
 
 Должен появится экран с вводом пароля. Набираем `369875`.
 
-![](/assets/0-phone-3.png)
+<p align="center">
+  <img src="/assets/0-phone-3.png" width="85%"/>
+</p>
 
 Появится инженерное меню головного устройства. Все надписи будут на китайском.
 
@@ -26,7 +32,9 @@
 В инжеренром меню необходимо включить доступ к устройству с помощью `adb`. Для этого нажимаем кнопки как на экране ниже (что бы выключить `adb` нажимаем другую
 кнопку).
 
-![](/assets/1-menu-0.png)
+<p align="center">
+  <img src="/assets/1-menu-0.png" width="85%"/>
+</p>
 
 ## Работа с adb
 
@@ -105,7 +113,7 @@ remount succeeded
 > echo adb36987 | adb shell pm install -t /data/media/0/Download/FX_v9.0.1.2\(9012\).apk
 ```
 
-К сожалению, приложение не появится в лаунчере, но его можно будет запустить вручную, с помощью `adb`
+~~К сожалению, приложение не появится в лаунчере, но~~ _(см. ниже)_ его можно будет запустить вручную, с помощью `adb`
 
 ```sh
 > echo adb36987 | adb shell monkey -p nextapp.fx -c android.intent.category.LAUNCHER 1
@@ -117,6 +125,19 @@ remount succeeded
 ```sh
 > echo adb36987 | adb shell pm list packages
 ```
+
+## Добавляем иконку установленного приложения в штатный лаунчер
+
+> _Сам я это не проверял, но говорят работает_
+
+Чтобы после установки приложение появилось в штатном лаунчере достаточно почистить кэш лаунчера и перезагрузить ГУ!
+
+**:feelsgood: Но будь осторожен - после удаления установленного приложения необходимо снова почистить кэш лаунчера и перезагрузить ГУ.**
+
+<!--
+TODO: проверить и добавить картинок
+TODO: проверить очистку кеша через `adb shell pm clear <launcher.package.name>`
+-->
 
 ## Скрипты
 
@@ -139,26 +160,37 @@ _Используюйте на свой страх и риск!!!_
 
 Открываем настройки Android через `adb`, либо через пунк в инжеренром меню
 
-![](/assets/1-menu-1.png)
+<p align="center">
+  <img src="/assets/1-menu-1.png" width="85%"/>
+</p>
 
 Идем в приложения, а дальше все приложения. Там находим нужное нам приложение с названием на китайском
 
-![](/assets/2-voice-assistant-0.png)
+<p align="center">
+  <img src="/assets/2-voice-assistant-0.png" width="85%"/>
+</p>
 
 Ищем нужную нам настройку
 
-![](/assets/2-voice-assistant-1.png)
+<p align="center">
+  <img src="/assets/2-voice-assistant-1.png" width="85%"/>
+</p>
 
-![](/assets/2-voice-assistant-2.png)
+<p align="center">
+  <img src="/assets/2-voice-assistant-2.png" width="85%"/>
+</p>
 
 И выключаем
 
-![](/assets/2-voice-assistant-3.png)
+<p align="center">
+  <img src="/assets/2-voice-assistant-3.png" width="85%"/>
+</p>
 
 Готово!
 
 ## Список литературы
 
-* [Товарищи китайцы](https://github.com/Zerocnx/ChangAn-Raeton-UNIV-)
+* [Zerocnx 1](https://github.com/Zerocnx/ChangAn-Raeton-UNIV-)
+* [Zerocnx 2](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong)
 * [XDA](https://forum.xda-developers.com/t/changan-uni-t-2022-s202_ica_spm8666p1_64_car.4540235/)
 * [Telegram канал русскоязычного сообщества Changan UNI K](https://t.me/changan_uni_k)
